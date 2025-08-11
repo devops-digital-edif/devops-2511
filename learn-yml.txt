@@ -36,9 +36,28 @@ ______________________________________
   - data is going to be represend as key and value pairs, key and valu separated by colon folled by space
     ex: name: murali
 
+-----------------
+# strings types
+Normal String:
+    ex: jobDescription: "need devops engg with 3 years exp. he/she should have hands-on exp on github action. should be familier with aws/azure cloud"
 
-
-
+1. folded block string
+  ex: jobDescription: >
+        need devops engg with 3 years exp.
+        he/she should have hands-on exp on github action.
+        should be familier with aws/azure cloud.
+  output: 
+     need devops engg with 3 years exp. he/she should have hands-on exp on github action. should be familier with aws/azure cloud.
+2. literal block string
+  ex: jobDescription: |
+        need devops engg with 3 years exp.
+        he/she should have hands-on exp on github action.
+        should be familier with aws/azure cloud.
+  output:
+        need devops engg with 3 years exp.
+        he/she should have hands-on exp on github action.
+        should be familier with aws/azure cloud.
+    
 
 
 
