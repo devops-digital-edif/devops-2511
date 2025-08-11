@@ -1,0 +1,31 @@
+# Tollywood actors profile
+tollywood:
+  actor1:
+    name: prabhas   # dictionary data  ----> tollywood.actor1.name
+    age: 45         # number type
+    is_married: false    # boolean type
+    girl_friends: null   # null value
+    movies:           # sequence
+      - salar
+      - bahubali
+      - kalki
+      - etc
+    fullName: "uppalapati prabhas raju"  # string data
+  actor2:
+    name: krishnamRaju    # tollywood.actor2.name
+---
+tollywood:
+  actor1:
+    name: prabhas   # dictionary data  ----> tollywood.actor1.name
+    age: 45         # number type
+    is_married: false    # boolean type
+    girl_friends: null   # null value
+    movies:           # sequence
+      - salar
+      - bahubali
+      - kalki
+      - etc
+    fullName: "uppalapati prabhas raju"  # string data
+  actor2:
+    name: krishnamRaju    # tollywood.actor2.name
+    
