@@ -13,6 +13,8 @@
   - ex: config-1
         ---
         config-2
+- in yaml hash tag (#) represents the comment
+______________________________________
 # YAML Data Types
 1. Scalar Data Type
   - String: text enclosed in single or double quotes
