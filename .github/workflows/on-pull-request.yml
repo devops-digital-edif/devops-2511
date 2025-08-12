@@ -1,0 +1,10 @@
+name: On Pull Request
+on: pull_request
+jobs:
+  run-on-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run job on push
+        run: echo "job triggered due to push event"
+      - name: job completed
+        run: echo "job completed"
