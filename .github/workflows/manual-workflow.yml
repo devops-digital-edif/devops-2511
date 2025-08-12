@@ -1,5 +1,5 @@
-name: First Workflow (Dev)
-on: push
+name: Manual Trigger
+on: workflow_dispatch
 jobs:
   greet:
     runs-on: ubuntu-latest
