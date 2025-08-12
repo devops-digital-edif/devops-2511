@@ -1,0 +1,14 @@
+name: On Push Branch
+on: 
+  push:
+    branches:
+      - main
+#      - dev
+jobs:
+  run-on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run job on push
+        run: echo "job triggered due to push event"
+      - name: job completed
+        run: echo "job completed"
