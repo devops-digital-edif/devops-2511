@@ -11,6 +11,7 @@ jobs:
       - name: Build Completed
         run: echo "build completed"
   test:
+    needs: build
     runs-on: windows-latest   # allocate the brand new server for test job
     steps:
       - name: Tests Started
@@ -18,6 +19,7 @@ jobs:
       - name: Tests Completed
         run: echo "tests are completed"
   deploy: 
+    needs: test
     runs-on: ubuntu-latest    # allocate brand new server for build job
     steps: 
       - name: Build Started
