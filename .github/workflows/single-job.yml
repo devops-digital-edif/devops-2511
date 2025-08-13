@@ -1,0 +1,10 @@
+name: Single Job
+on: workflow_dispatch  # manually we need to run the pipeline
+jobs:
+  job1:    # job1 is the name of a job, it can be any thing like build,test,approval,notification...
+    runs-on: ubuntu-latest   # specify the runner where you are going to execute your instructions of your job
+    steps:
+      - name: print user name
+        run: echo "Hello Murali"
+      - name: greet students
+        run: echo "welcome to Github Actions"
