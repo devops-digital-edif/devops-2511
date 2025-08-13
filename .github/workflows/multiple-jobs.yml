@@ -18,7 +18,8 @@ jobs:
       - name: Tests Started
         run: echo "test started"
       - name: Tests Completed
-        run: echo "tests are completed
+        if: success()
+        run: echo "tests are completed"
   deploy: 
     needs: test
     if: failure() # if the test job failed then it will run or it won't run- it will skip
