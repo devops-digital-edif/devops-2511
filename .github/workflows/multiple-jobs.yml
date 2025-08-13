@@ -16,9 +16,8 @@ jobs:
     runs-on: windows-latest   # allocate the brand new server for test job
     steps:
       - name: Tests Started
-        run: echo "test started
+        run: echo "test started"
       - name: Tests Completed
-        if: failure()
         run: echo "tests are completed"
   deploy: 
     needs: test
