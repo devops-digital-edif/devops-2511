@@ -1,0 +1,19 @@
+name: Multiple Jobs
+on: 
+  - push
+  - workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest    # allocate brand new server for build job
+    steps: 
+      - name: Build Started
+        run: echo "build started"
+      - name: Build Completed
+        run: echo "build completed"
+  test:
+    runs-on: windows-latest   # allocate the brand new server for test job
+    steps:
+      - name: Tests Started
+        run: echo "test started"
+      - name: Tests Completed
+        run: echo "tests are completed"
