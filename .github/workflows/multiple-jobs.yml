@@ -16,13 +16,22 @@ jobs:
     runs-on: windows-latest   # allocate the brand new server for test job
     steps:
       - name: Tests Started
-        run: echo "test started"
+        run: echo "test started
       - name: Tests Completed
-        if: success()
+        if: failure()
         run: echo "tests are completed"
   deploy: 
     needs: test
     if: failure() # if the test job failed then it will run or it won't run- it will skip
+    runs-on: ubuntu-latest    # allocate brand new server for build job
+    steps: 
+      - name: Build Started
+        run: echo "deploy started"
+      - name: Build Completed
+        run: echo "deploy completed"
+  deploy2: 
+    needs: test
+    if: success() # if the test job failed then it will run or it won't run- it will skip
     runs-on: ubuntu-latest    # allocate brand new server for build job
     steps: 
       - name: Build Started
