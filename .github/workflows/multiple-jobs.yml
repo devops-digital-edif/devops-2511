@@ -21,7 +21,7 @@ jobs:
         run: echo "tests are completed
   deploy: 
     needs: test
-    if: success()
+    if: failure() # if the test job failed then it will run or it won't run- it will skip
     runs-on: ubuntu-latest    # allocate brand new server for build job
     steps: 
       - name: Build Started
