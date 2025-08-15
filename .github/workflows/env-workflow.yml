@@ -1,5 +1,8 @@
 name: demo on env
 on: workflow_dispatch
+env:
+  APPENV: development
+  DBNAME: dev-db
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -13,10 +16,11 @@ jobs:
         run: echo "using $DB_NAME to deploy"
 
 # trying to call job1 variables in job2
+# trying to call varibales which are declared outside of pipeline
   job2:
     runs-on: ubuntu-latest
     steps: 
       - name: calling job level env variables
-        run: echo "deploy app into $APP_ENV env"
+        run: echo "deploy app into $APPENV env"
       - name: calling DB variable
-        run: echo "using $DB_NAME to deploy"
+        run: echo "using $DBNAME to deploy"
