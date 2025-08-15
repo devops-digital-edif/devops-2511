@@ -43,4 +43,9 @@ jobs:
         run: echo " Connect to ${{ vars.DB_NAME }} "
       - name: Calling Repo secret
         run: echo " Connect db using password ${{ secrets.DB_PASSWORD }} "
-          
+# Using Default Github action variables
+  job5:
+    runs-on: ubuntu-latest
+    steps:
+      - name: using default variable
+        run: echo "print the current run number $GITHUB_RUN_NUMBER "
