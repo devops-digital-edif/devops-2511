@@ -41,6 +41,6 @@ jobs:
     steps:
       - name: Calling Repo Variable
         run: echo " Connect to ${{ vars.DB_NAME }} "
-      - name: Calling Repo Variable Password
-        run: echo " Connect db using password ${{ vars.DB_PASSWORD }} "
+      - name: Calling Repo secret
+        run: echo " Connect db using password ${{ secrets.DB_PASSWORD }} "
           
