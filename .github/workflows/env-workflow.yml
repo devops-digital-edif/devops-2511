@@ -39,6 +39,8 @@ jobs:
   job4:
     runs-on: ubuntu-latest
     steps:
-      - name: Calling Repo Variables
-        run: echo " Connect db using password $DB_PASSWORD "
+      - name: Calling Repo Variable
+        run: echo " Connect to ${{ vars.DB_NAME }} "
+      - name: Calling Repo Variable Password
+        run: echo " Connect db using password ${{ vars.DB_PASSWORD }} "
           
