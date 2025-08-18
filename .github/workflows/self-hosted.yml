@@ -4,5 +4,5 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-      - name: Running on Self hosted runner
-        run: echo "using self hosted runner"
+      - name: Create Empty File
+        run: cd /home/azureuser && touch devops2511.txt
