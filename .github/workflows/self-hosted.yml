@@ -4,5 +4,12 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-      - name: Create Empty File
-        run: cd /home/azureuser && touch devops2511.txt
+      - name: Update Package Manger
+        run: sudo apt update
+      - name: install nginx
+        run: sudo apt install nginx -y
+      - name: nginx status
+        run: sudo systemctl status nginx
+      - name: Print ports
+        run: ss -ntpl
+        
