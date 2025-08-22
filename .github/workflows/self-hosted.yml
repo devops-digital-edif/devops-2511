@@ -1,0 +1,23 @@
+name: Self Hosted Runner
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Update Package Manger
+        run: sudo apt update
+      - name: install nginx
+        run: sudo apt install nginx -y
+      - name: remove default page
+        run: sudo rm -rf /var/www/html/*
+      - name: clone the code
+        run: git clone https://github.com/muralialakuntla3/ecomm.git
+      - name: copy the code to nginx
+        run: sudo cp -rf ecomm/* /var/www/html/
+      - name: remove cloned folder
+        run: sudo rm -rf ecomm
+      - name: nginx restart
+        run: sudo systemctl restart nginx
+      - name: Print ports
+        run: ss -ntpl
+        

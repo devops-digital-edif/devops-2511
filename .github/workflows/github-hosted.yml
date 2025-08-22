@@ -1,0 +1,18 @@
+name: Github Hosted Runner
+on: workflow_dispatch
+jobs:
+  ubuntu-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running in Ubuntu
+        run: echo "running in ubuntu server"
+  windows-job:
+    runs-on: windows-latest
+    steps:
+      - name: Running in Ubuntu
+        run: echo "running in ubuntu server"
+  macos-job:
+    runs-on: macos-latest
+    steps:
+      - name: Running in Ubuntu
+        run: echo "running in ubuntu server"

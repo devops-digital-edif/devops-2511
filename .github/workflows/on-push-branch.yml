@@ -1,9 +1,10 @@
 name: On Push Branch
 on: 
-  push:
-    branches:
-      - main
-#      - dev
+  - workflow_dispatch
+#  -  push:
+ #      branches:
+#         - main
+  #      - dev
 jobs:
   run-on-push:
     runs-on: ubuntu-latest
